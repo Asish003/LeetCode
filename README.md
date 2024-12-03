@@ -1,6 +1,6 @@
 # LeetCode Progress
 
-I am actively solving **LeetCode** problems to enhance my problem-solving skills. While I have made significant progress, some problems remain in the "attempting" stage as I work towards constructing solutions that pass all the test cases.
+I am actively solving **LeetCode** problems to enhance my problem-solving skills. While I have made significant progress, some problems remain in the "attempting" stage and few are incomplete as I work towards constructing solutions that pass all the test cases.
 
 ### Goals:
 - Refine my approach to challenging problems.
