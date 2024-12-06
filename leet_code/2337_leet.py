@@ -1,43 +1,38 @@
 class Solution:
     def canChange(self, start: str, target: str) -> bool:
         
-        if start.replace('_', '') != target.replace('_', ''):
-            return False
+        # if start.replace('_', '') != target.replace('_', ''):
+        #     return False
+
         i = 0
         j = 0
-        temp = 0
+        count = 0
 
         s = list(start)
         t = list(target)
-            
 
         while True:
-
-            if s[i] == t[j]:
-                if i == j: #same position, so matches
+            if s[i] == s[j]:
+                if count>0 and target[i] == 'L':
                     i += 1
                     j += 1
-                elif i != j : #matches but different position
-                    while i != j and i<len(str):
-                        if s[i] == 'L' and s[i- 1] == '_': #checking previous steps
-                            s[i],s[i- 1] = s[i-1],s[i] #swapping
-                        elif s[i] == 'R' and s[i+ 1] == '_': #checking previous steps
-                            s[i],s[i+ 1] = s[i+1],s[i] #swapping
-                        else:
-                            break
-                    if i != j: #Still i is not equal to j after swap, due to interuption
-                        return False
-                    else: #It means swap is successful so,
-                        i += 1
-                        j += 1
-            elif s[i] != t[j]:
+                    count = 0
+            elif t[j] == 'L' and s[i] == '_':
                 i += 1
+                count = count + 1
+            elif t[j] == 'R' and s[i] == '_':
+                i += 1
+                count = count + 1
+            
+# start = "___L__R__R_"
+# target = "L________RR"
 
+# start = "R_L_"
+# target = "__LR"
 
+start ="_LL__R__R_"
+target ="L___L___RR"
 
-
-start = "_L__R__R_"
-target = "L______RR"
 sol = Solution()
 ans = sol.canChange(start,target)
-print(ans+"done")
+print(ans)
