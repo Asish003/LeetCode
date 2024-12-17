@@ -1,2 +1,2 @@
-nums = [2,4,8,2]
-# maxOperations = 4
+
+                    marked.append(nums[smallest_index_num - 1])
