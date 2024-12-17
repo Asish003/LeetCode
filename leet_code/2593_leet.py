@@ -1,3 +1,5 @@
+# error not working : variable access error{smallest}
+
 class Solution:
     def findScore(self, nums) -> int:
         
